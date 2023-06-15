@@ -188,22 +188,21 @@ class StringData:public Data{
      * 
      */
      bool isSame( const Data& x) const
-{
-  if(_a==dynamic_cast<const FloatData&>(x).get_float())
-  {
-      return true;
-  }
-  return false;
-}
-float get_float()const
-{
-    return _a;
-}
+     {
+        if(_a==dynamic_cast<const FloatData&>(x).get_float())
+        {
+           return true;
+        }
+        return false;
+     }
+     float get_float()const
+     {
+       return _a;
+     }
     ~FloatData();
     private:
     float _a;
 };
-//Boolean(false)
 class Boolean:public Data
 {
     public:
@@ -243,17 +242,17 @@ class Boolean:public Data
      * 
      */
      bool isSame( const Data& x) const
-{
-  if(_a==dynamic_cast<const Boolean&>(x).get_bool())
-  {
-      return true;
-  }
-  return false;
-}
-float get_bool()const
-{
-    return _a;
-}
+     {
+       if(_a==dynamic_cast<const Boolean&>(x).get_bool())
+       {
+         return true;
+       }
+       return false;
+     }
+     float get_bool()const
+     {
+       return _a;
+     }
     ~Boolean();
     private:
     bool _a;
